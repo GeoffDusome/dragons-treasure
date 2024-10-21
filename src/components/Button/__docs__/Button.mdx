@@ -1,0 +1,42 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Button from "./Button.stories.tsx";
+
+<Meta of={Button} title="Button" />
+
+# Button
+
+Button component with different props.
+
+## Example
+
+<Canvas of={Button.WithIconLeft} />
+
+## Usage
+
+```ts
+import {Button} from "dragons-treasure";
+
+const Example = () => {
+  return (
+      <Button
+        icon="https://via.placeholder.com/24"
+        iconDimensions={{ width: 24, height: 24 }}
+        iconPosition="left"
+        text="Button Text"
+        style="filled"
+        onClick={()=> console.log("Clicked")}
+      />
+  );
+};
+
+export default Example;
+```
+
+## Arguments
+- **icon** - A string that contains the URL to an icon to display within the button.
+- **iconDimensions** - An object containing width & height that determines the size of the icon.
+- **iconPosition** - A string that represents which side of the text the icon should display on.
+- **text** - A string that represents the text content of the button.
+- **style** - A string that represents which style of button should render. Can be "filled", "outlined", or "ghost".
+- **onClick** - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.
