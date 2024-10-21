@@ -1,0 +1,36 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Link from "./Link.stories.tsx";
+
+<Meta of={Link} title="Link" />
+
+# Link
+
+Link component with different props.
+
+## Example
+
+<Canvas of={Link.Default} />
+
+## Usage
+
+```ts
+import {Link} from "dragons-treasure";
+
+const Example = () => {
+  return (
+      <Link
+        to="https://www.google.com"
+	target="_self"
+	text="Link Text"
+      />
+  );
+};
+
+export default Example;
+```
+
+## Arguments
+- **to** - A string that contains the URL the link should send the user to.
+- **target** - A string that contains the option for the target.
+- **text** - The text to display within the link.
