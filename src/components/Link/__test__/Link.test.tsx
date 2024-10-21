@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import Link from "../Link";
 import "@testing-library/jest-dom";
 
-describe("Button component", () => {
+describe("Link component", () => {
   it("should render correctly", () => {
     render(<Link text="Button Test" to="https://www.google.com" />);
     const link = screen.getByRole("link");
