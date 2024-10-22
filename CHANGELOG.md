@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+- Added: Tabs Component
+
 ## 1.2.0
 
 - Added: Accordion Component
