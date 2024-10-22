@@ -1,0 +1,36 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Tabs from "./Tabs.stories.tsx";
+
+<Meta of={Tabs} title="Tabs" />
+
+# Tabs
+
+Tabs component with different props.
+
+## Example
+
+<Canvas of={Tabs.Default} />
+
+## Usage
+
+```ts
+import {Tabs} from "dragons-treasure";
+
+const Example = () => {
+  return (
+    <Tabs
+      tabs={[
+        { title: "Tab 1", content: "Content 1" },
+        { title: "Tab 2", content: "Content 2" },
+        { title: "Tab 3", content: "Content 3" },
+      ]}
+    />
+  );
+};
+
+export default Example;
+```
+
+## Arguments
+- **tabs** - An array of tab content
