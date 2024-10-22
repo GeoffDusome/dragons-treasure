@@ -1,0 +1,46 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Accordion from "./Accordion.stories.tsx";
+
+<Meta of={Accordion} title="Accordion" />
+
+# Accordion
+
+Accordion component with different props.
+
+## Example
+
+<Canvas of={Accordion.Default} />
+
+## Usage
+
+```ts
+import {Accordion} from "dragons-treasure";
+
+const Example = () => {
+    return (
+        <Accordion
+            items={[{
+                title: "Title 1",
+                content: "Content 1",
+                open: true,
+            },
+            {
+                title: "Title 2",
+                content: "Content 2",
+            },
+            {
+                title: "Title 3",
+                content: "Content 3",
+            }]}
+            defaultOpen={false}
+        />
+    );
+};
+
+export default Example;
+```
+
+## Arguments
+- **items** - An array of items to display as accordions, `title` and `content` are required for each object within the array. An `open` parameter is also available, if just one accordion should be open by default.
+- **defaultOpen** - Whether or not to display all accordions as open by default.
